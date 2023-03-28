@@ -1,0 +1,15 @@
+C:\Users\Ozan\Desktop\AcarSoft\DAL\bin\Debug\netcoreapp3.1\DAL.deps.json
+C:\Users\Ozan\Desktop\AcarSoft\DAL\bin\Debug\netcoreapp3.1\DAL.dll
+C:\Users\Ozan\Desktop\AcarSoft\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
+C:\Users\Ozan\Desktop\AcarSoft\DAL\bin\Debug\netcoreapp3.1\Infrastructure.dll
+C:\Users\Ozan\Desktop\AcarSoft\DAL\bin\Debug\netcoreapp3.1\Model.dll
+C:\Users\Ozan\Desktop\AcarSoft\DAL\bin\Debug\netcoreapp3.1\Model.pdb
+C:\Users\Ozan\Desktop\AcarSoft\DAL\bin\Debug\netcoreapp3.1\Infrastructure.pdb
+C:\Users\Ozan\Desktop\AcarSoft\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.AssemblyReference.cache
+C:\Users\Ozan\Desktop\AcarSoft\DAL\obj\Debug\netcoreapp3.1\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ozan\Desktop\AcarSoft\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
+C:\Users\Ozan\Desktop\AcarSoft\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
+C:\Users\Ozan\Desktop\AcarSoft\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Ozan\Desktop\AcarSoft\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CopyComplete
+C:\Users\Ozan\Desktop\AcarSoft\DAL\obj\Debug\netcoreapp3.1\DAL.dll
+C:\Users\Ozan\Desktop\AcarSoft\DAL\obj\Debug\netcoreapp3.1\DAL.pdb

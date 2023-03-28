@@ -1,0 +1,56 @@
+﻿
+@{
+    Model.Entities.Manager manag = ViewBag.Manager as Model.Entities.Manager;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Site İsmi</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <script src="~/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <a href ="/Manager/ManagerHome/Index"class="navbar-brand"><b>Acar</b> Software</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="/Manager/ManagerHome/Projects" class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Manager/ManagerHome/AboutUs" class="nav-link" asp-area="" asp-controller="Home" asp-action="Contact">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Manager/ManagerHome/Contact" class="nav-link" asp-area="" asp-controller="Product" asp-action="Index">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href ="/Manager/ManagerHome/EditPage"class="nav-link" asp-area="" asp-controller="Home" asp-action="About">Profile</a>
+                    </li>
+                    <li class="nav_item">
+                        <img src="~/Pictures/@manag.PhotoPath" height="30" width="40" />
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container py-4">
+        @RenderBody()
+    </div>
+    <footer class="border-top py-3">
+        <div class="container text-center">
+            <b>Acar</b> Software &copy; 2020 - All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

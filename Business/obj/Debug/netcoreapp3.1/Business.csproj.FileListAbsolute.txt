@@ -1,0 +1,17 @@
+C:\Users\Ozan\Desktop\AcarSoft\Business\bin\Debug\netcoreapp3.1\Business.deps.json
+C:\Users\Ozan\Desktop\AcarSoft\Business\bin\Debug\netcoreapp3.1\Business.dll
+C:\Users\Ozan\Desktop\AcarSoft\Business\bin\Debug\netcoreapp3.1\Business.pdb
+C:\Users\Ozan\Desktop\AcarSoft\Business\bin\Debug\netcoreapp3.1\DAL.dll
+C:\Users\Ozan\Desktop\AcarSoft\Business\bin\Debug\netcoreapp3.1\Infrastructure.dll
+C:\Users\Ozan\Desktop\AcarSoft\Business\bin\Debug\netcoreapp3.1\Model.dll
+C:\Users\Ozan\Desktop\AcarSoft\Business\bin\Debug\netcoreapp3.1\DAL.pdb
+C:\Users\Ozan\Desktop\AcarSoft\Business\bin\Debug\netcoreapp3.1\Infrastructure.pdb
+C:\Users\Ozan\Desktop\AcarSoft\Business\bin\Debug\netcoreapp3.1\Model.pdb
+C:\Users\Ozan\Desktop\AcarSoft\Business\obj\Debug\netcoreapp3.1\Business.csproj.AssemblyReference.cache
+C:\Users\Ozan\Desktop\AcarSoft\Business\obj\Debug\netcoreapp3.1\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ozan\Desktop\AcarSoft\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfoInputs.cache
+C:\Users\Ozan\Desktop\AcarSoft\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfo.cs
+C:\Users\Ozan\Desktop\AcarSoft\Business\obj\Debug\netcoreapp3.1\Business.csproj.CoreCompileInputs.cache
+C:\Users\Ozan\Desktop\AcarSoft\Business\obj\Debug\netcoreapp3.1\Business.csproj.CopyComplete
+C:\Users\Ozan\Desktop\AcarSoft\Business\obj\Debug\netcoreapp3.1\Business.dll
+C:\Users\Ozan\Desktop\AcarSoft\Business\obj\Debug\netcoreapp3.1\Business.pdb

@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Choose Log In</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <script src="~/js/jquery-3.6.1.min.js"></script>
+    <style>
+        .container {
+            position: relative;
+            width: 50%;
+        }
+
+            /* Make the image responsive */
+            .container img {
+                width: 100%;
+                height: auto;
+            }
+
+            /* Style the button and place it in the middle of the container/image */
+            .container .btn {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                color: white;
+                font-size: 24px;
+                padding: 12px 24px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+                .container .btn:hover {
+                    opacity: 0.1;
+                }
+                .fill{
+                    height: 100px
+                }
+    </style>
+</head>
+<body>
+    <div class="fill">
+
+    </div>
+    <div class="container">
+        <img src="~/Pictures/Manager LogIn.jpg" alt="Snow">
+        <button class="btn" id = "manager">Manager Log in</button>
+    </div>
+    <div class="container">
+        <img src="~/Pictures/Client LogIn.jpg" alt="Snow">
+        <button class="btn" id = "client">Client Log in</button>
+    </div>
+    <div class="fill">
+
+    </div>
+    <script src="~/jquery-3.6.1.min.js"> </script>
+    
+    <script>
+        $(document).ready(
+            function(){
+                $("#manager").click(function(){
+                    window.location.href = "ManagerLogIn"
+                }
+                )
+                $("#client").click(function(){
+                    window.location.href = "/Client/LogIn/ClientLogIn";
+                })
+            }
+        );
+    </script>
+</body>
+</html>

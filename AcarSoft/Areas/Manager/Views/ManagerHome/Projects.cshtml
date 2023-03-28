@@ -1,0 +1,214 @@
+﻿
+@{
+    Model.Entities.Manager manag = ViewBag.Manager as Model.Entities.Manager;
+    ViewData["Title"] = "Projects";
+    Layout = "~/Areas/Manager/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+    <!--  Meta  -->
+    <meta charset="UTF-8" />
+    <title>Products</title>
+
+    <!--  Styles  -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/index.processed.css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,300,100,700,500' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            background: #f6f6f6;
+            font-family: Roboto;
+        }
+
+        .fm-page h2 {
+            color: #0090d6;
+            text-align: center;
+        }
+
+        .product-container {
+            position: relative;
+            padding: 15px;
+            background: #fff;
+        }
+
+            .product-container .promo {
+                width: 158px;
+                height: 160px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-image: url("https://preprod.coriolis.com/media/wysiwyg/img/pages/fiche-produit-ab/bg-product-promo.png");
+                background-repeat: none;
+            }
+
+                .product-container .promo span {
+                    display: inline-block;
+                    margin: 5px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: #fff;
+                }
+
+            .product-container .product-title {
+                margin-top: 30px;
+            }
+
+                .product-container .product-title h3 {
+                    margin: 15px 0 15px 0;
+                    text-align: center;
+                    font-size: 22px;
+                    color: #333;
+                }
+
+            .product-container .product-img img {
+                display: block;
+                margin-top: 30px;
+                max-width: 190px;
+                margin: 30px auto 0 auto;
+            }
+
+            .product-container .product-price {
+                text-align: center;
+                font-size: 27px;
+                color: #0090d6;
+            }
+
+                .product-container .product-price span:first-child {
+                    display: block;
+                    margin: auto;
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: #333333;
+                }
+
+                .product-container .product-price .price {
+                    display: block;
+                    margin: auto;
+                    font-size: 27px;
+                    font-weight: 500;
+                }
+
+                .product-container .product-price .old-price {
+                    font-size: 12px;
+                    color: #a1a1a1;
+                }
+
+            .product-container .product-button .button {
+                display: block;
+                width: 142px;
+                max-width: 142px;
+                margin: 15px auto;
+                padding: 6px 10px;
+                border-color: #c83d9c;
+                border-radius: 2px !important;
+                font-size: 16px;
+                color: #fff;
+                text-decoration: none;
+                background: #c83d9c;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="container fm-page">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="">Our Products</h2>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Start product container -->
+            <div class="col-xs-12 col-md-3">
+
+                <div class="product-container">
+
+                    <div class="product-img">
+                        <img alt="" src="~/pictures/ChoreNet.jpg" width="" height="" />
+                    </div>
+                    <div class="product-title">
+                        <h3>ChoreNet<br> ChoreNET FrameWork</h3>
+                    </div>
+                    <div class="product-price">
+                        <span class="">Monthly Subscription</span>
+                        <span class="price">55,00€</span>
+                        <span class="old-price"><s>349,00€</s></span> <span class="old-price">267,60€ (Pay less)</span>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- end product container -->
+            <!-- Start product container -->
+            <div class="col-xs-12 col-md-3">
+                <div class="product-container">
+                    <div class="product-img">
+                        <img alt="" src="~/pictures/SentAct.jpg" />
+                    </div>
+                    <div class="product-title">
+                        <h3>SentAct<br>SentAct AI</h3>
+                    </div>
+                    <div class="product-price">
+                        <span class="">Monthly Subscription</span>
+                        <span class="price">55,00€</span>
+                        <span class="old-price"><s>349,00€</s></span> <span class="old-price">267,60€ (Pay less)</span>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end product container -->
+            <!-- Start product container -->
+            <div class="col-xs-12 col-md-3">
+                <div class="product-container">
+                    <div class="promo hide">
+                        <span>AcarNet<br>web</span>
+                    </div>
+                    <div class="product-img">
+                        <img alt="" src="~/pictures/AcarNet.jpg" />
+                    </div>
+                    <div class="product-title">
+                        <h3>AcarNet<br>AcarNet FrameWork</h3>
+                    </div>
+                    <div class="product-price">
+                        <span class="">Monthly Subscription</span>
+                        <span class="price">55,00€</span>
+                        <span class="old-price"><s>349,00€</s></span> <span class="old-price">267,60€ (Pay less)</span>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end product container -->
+            <!-- Start product container -->
+            <div class="col-xs-12 col-md-3">
+                <div class="product-container">
+                    <div class="promo hide">
+                        <span>Accoultant<br>web</span>
+                    </div>
+                    <div class="product-img">
+                        <img alt="" src="~/pictures/Accoultant.jpg" />
+                    </div>
+                    <div class="product-title">
+                        <h3>Accoultant<br>Management</h3>
+                    </div>
+                    <div class="product-price">
+                        <span class="">Monthly Subscription</span>
+                        <span class="price">55,00€</span>
+                        <span class="old-price"><s>349,00€</s></span> <span class="old-price">267,60€ (Pay less)</span>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end product container -->
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/index.js"></script>
+</body>
+</html>
+

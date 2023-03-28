@@ -1,0 +1,172 @@
+﻿@using Model.Entities;
+@model List<Manager>;
+@{
+    Layout = "_Layout";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to AcarSoft</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+        img{
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+        .projects{
+            width: 400px;
+            height: 200px
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+        <img class="w3-image" src="~/pictures/architect.jpg" alt="Software" width="1500" height="800">
+        <div class="w3-display-middle w3-margin-top w3-center">
+            <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>ACAR</b></span> <span class="w3-hide-small w3-text-light-grey">Software</span></h1>
+            <div>
+                <br />
+            </div>
+            <h2 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Together</b></span> <span class="w3-hide-small w3-text-light-grey">To</span><span class="w3-padding w3-black w3-opacity-min"><b>Tomorrow</b></span></h2>
+        </div>
+    </header>
+
+    <!-- Page content -->
+    <div class="w3-content w3-padding" style="max-width:1564px">
+
+        <!-- Project Section -->
+        <div class="w3-container w3-padding-32" id="projects">
+            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><a href="/Home/Projects">Projects</a></h3>
+        </div>
+
+        <div class="w3-row-padding">
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">ChoreNet</div>
+                    <img src="~/pictures/ChoreNet.jpg" alt="Desktop" class="projects">
+                </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">SentAct</div>
+                    <img src="~/pictures/SentAct.jpg" alt="AI" class="projects">
+                </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">AcarNet</div>
+                    <img src="~/pictures/AcarNet.jpg" alt="Network" class="projects">
+                </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">Accoultant</div>
+                    <img src="~/pictures/Accoultant.jpg" alt="Account" class="projects">
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-row-padding">
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">ChoreNet</div>
+                    <img src="~/pictures/ChoreNet 2.jpg" alt="Desktop" >
+                </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">SentAct</div>
+                    <img src="~/pictures/SentAct 2.jpg" alt="AI" >
+                </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">AcarNet</div>
+                    <img src="~/pictures/AcarNet 2.jpg" alt="Network" >
+                </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">Accoultant</div>
+                    <img src="~/pictures/Accoultant 2.jpg" alt="Acoount" >
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="w3-container w3-padding-32" id="about">
+            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><span><a href="~/Home/AboutUs">About</a></span></h3>
+            <p>
+                &emsp;
+                AcarSoft® is a software company established in 2020. Acarsoft® was established by Ozan Can ACAR, who is also currently the Founder & CEO & CFEO. AcarSoft® produces general-various software products for Desktop Applications, Artificial Intelligence(AI)-supported software systems and Networks.
+                <span><br /></span>
+                &emsp; Our mission is to help provide better computer experience using our enhanced software product capabilities.
+                <span><br /></span>
+                &emsp; Our vision is to help people, working with people. All together, all to tomorrow.
+            </p>
+        </div>
+
+        <div class="w3-row-padding w3-grayscale">
+            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><span><a href="~/Home/AboutUs">Our Team</a></span></h3>
+            @foreach(var item in Model)
+            {
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <img src="~/pictures/@item.PhotoPath" style="width:100%" height="200">
+                    <h3>@item.FullName</h3>
+                    <p>@item.Profession of our firm and software products.</p>
+                    <p><a class="w3-button w3-light-grey w3-block" href="/Home/Contact">Contact</a></p>
+                </div>
+            }
+        </div>
+
+        <!-- Contact Section -->
+        <div class="w3-container w3-padding-32" id="contact">
+            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><span><a href="~/Home/Contact">Contact</a></span></h3>
+            <p>Lets get in touch and talk about your next project. You can inform us about your project below or in the contact section.</p>
+            <form action="/action_page.php" target="_blank">
+                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name" id="Name">
+                <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email" id="Email">
+                <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject" id="Subject">
+                <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment" id="Comment">
+                <button class="w3-button w3-black w3-section" type="submit" id="sendmessage">
+                    <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                </button>
+            </form>
+        </div>
+        
+        <!-- Image of location/map -->
+        <div class="w3-container">
+            <img src="~/pictures/everything is possible.jpg" class="w3-image" style="width:100% height:90%" >
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#sendmessage").click(function () {
+               
+                var name = $("#Name").val()
+                var email = $("#Email").val()
+                var subject = $("#Subject").val()
+                var comment = $("#Comment").val()
+                if(name != "" && email != "" && subject != "" && comment != ""){
+                    swal("Success!", "Your message was sent successfully.", "success").then((result)=>{
+                        window.location.href= "/Home/Index"
+                    })
+                }
+            })
+        });
+        
+    </script>
+    
+</body>
+</html>

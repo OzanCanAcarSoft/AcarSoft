@@ -1,0 +1,233 @@
+﻿@{
+    Layout = "~/Areas/Client/Views/Shared/_Layout.cshtml";
+}
+
+@using Model.Entities;
+@model List<Product>;
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+    <!--  Meta  -->
+    <meta charset="UTF-8" />
+    <title>Products</title>
+
+    <!--  Styles  -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/index.processed.css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,300,100,700,500' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            background: #f6f6f6;
+            font-family: Roboto;
+        }
+
+        .fm-page h2 {
+            color: #0090d6;
+            text-align: center;
+        }
+
+        .product-container {
+            position: relative;
+            padding: 15px;
+            background: #fff;
+        }
+
+            .product-container .promo {
+                width: 158px;
+                height: 160px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-image: url("https://preprod.coriolis.com/media/wysiwyg/img/pages/fiche-produit-ab/bg-product-promo.png");
+                background-repeat: none;
+            }
+
+                .product-container .promo span {
+                    display: inline-block;
+                    margin: 5px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: #fff;
+                }
+
+            .product-container .product-title {
+                margin-top: 30px;
+            }
+
+                .product-container .product-title h3 {
+                    margin: 15px 0 15px 0;
+                    text-align: center;
+                    font-size: 22px;
+                    color: #333;
+                }
+
+            .product-container .product-img img {
+                display: block;
+                margin-top: 30px;
+                max-width: 190px;
+                margin: 30px auto 0 auto;
+            }
+
+            .product-container .product-price {
+                text-align: center;
+                font-size: 27px;
+                color: #0090d6;
+            }
+
+                .product-container .product-price span:first-child {
+                    display: block;
+                    margin: auto;
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: #333333;
+                }
+
+                .product-container .product-price .price {
+                    display: block;
+                    margin: auto;
+                    font-size: 27px;
+                    font-weight: 500;
+                }
+
+                .product-container .product-price .old-price {
+                    font-size: 12px;
+                    color: #a1a1a1;
+                }
+
+            .product-container .product-button .button {
+                display: block;
+                width: 142px;
+                max-width: 142px;
+                margin: 15px auto;
+                padding: 6px 10px;
+                border-color: #c83d9c;
+                border-radius: 2px !important;
+                font-size: 16px;
+                color: #fff;
+                text-decoration: none;
+                background: #c83d9c;
+            }
+            .filler{
+                height: 200px;
+            }
+
+
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container fm-page">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="">Our Products</h2>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+
+            @foreach(var item in Model)
+            {
+                var PhotoPath = item.ProductName.Replace(" ", "") + ".jpg";
+                var OldPrice = item.Price * 3;
+                var NewPrice = item.Price * 2;
+                <div class="col-xs-12 col-md-3">
+
+                    <div class="product-container">
+
+                        <div class="product-img">
+                            <img alt="" src="/Pictures/@PhotoPath"  />
+                        </div>
+                        <div class="product-title">
+                            <h3>@item.ProductName<br>@item.ProductName Framework</h3>
+                        </div>
+                        <div class="product-price">
+                            <span class="">Monthly Subscription</span>
+                            <span class="price">@item.Price</span>
+                            <span class="old-price"><s>@OldPrice €</s></span> <span class="old-price">@NewPrice € (Pay less)</span>
+                        </div>
+                        <div class="product-button">
+                            <button type="button" class="btn btn-primary buybutton" ProId="@item.Id" data-toggle="modal" data-target="#myModal">Buy Now!</button>
+                        </div>
+                    </div>
+                </div>
+            }
+    </div>
+    <div class="filler"></div>
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">Purchase Duration</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>For how long would you like to buy this product?</p>
+                        <form>
+                            <div class="form-group">
+                                <label for="select">Select a subscription time:</label>
+                                <select class="form-control" id="select">
+                                    <option value="3">3 Months</option>
+                                    <option value="6">6 Months</option>
+                                    <option value="9">9 Months</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                        <button type="button" class="btn btn-primary btn-satin-al-kaydet" id="btn-submit">Tamam</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        $(document).ready(function(){
+            $(".buybutton").click(function(){
+                var productId = $(this).attr("ProId")
+                    $(".btn-satin-al-kaydet").click(function(){
+                        var selectedValue = $("#select").val()
+                        $.ajax({
+                            url: "/Client/ClientHome/buy",
+                            method: "post",
+                            datatype: "json",
+                            data: {productId:productId, selectedValue:selectedValue},
+                            success: function(result){
+                                if(result.success)
+                                {
+                                    swal.fire("Purchase successful!").then((result) => {
+                                    window.location.href = "/Client/ClientHome/Index"
+                                });
+
+                                }
+                                else
+                                {
+                                    swal.fire(result.message)
+                                }
+                            }
+
+                        })
+            })
+        })
+        })
+    </script>
+    
+</body>
+</html>
